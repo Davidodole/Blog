@@ -2,9 +2,15 @@
 
 <h1>Home</h1>
 <P> <%= content %></P>
-<ul>
-    <li> <%- posts.title %> </li>
-    <li> <%- posts.compose %> </li>
-</ul>
+
+ <%  posts.forEach((item)=>{ %>
+       
+       <ul>
+           <li> <h1> <%= item.title %> </h1> </li>
+           <li> <span>Authur :  <%= item.authur %> </span></li>
+           <li> <p> <%= item.composed.substring(0, 400) %>....<a href="/post/<%= item.title %>">Read more</a> </p> </li>
+       </ul>
+       
+ <% }) %>
 
 <%- include("partials/footer") -%>

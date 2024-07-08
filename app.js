@@ -36,16 +36,23 @@ app.get("/compose",(req, res)=>{
     res.render("compose")
 });
 
+app.get("/post/:Links", (req, res)=>{
+    console.log(posts)
+    res.render("post")
+})
+
 
 // POST Router
 
 app.post("/compose", (req,res)=>{
     const title = req.body.input1;
-    const compose = req.body.input2;
+    const authur = req.body.input2;
+    const compose = req.body.input3;
     
     const message = {
+        authur : authur,
         title : title,
-        composed : compose
+        composed : compose,
     }
     posts.push(message);
     res.redirect("/");

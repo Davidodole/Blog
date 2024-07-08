@@ -1,0 +1,21 @@
+.navbar{
+    background-color: #0A6847;
+}
+body{
+    height: auto;
+}
+nav a, nav p{
+    color: #fff !important;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 10%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A6847;
+}

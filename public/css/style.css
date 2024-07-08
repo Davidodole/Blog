@@ -1,14 +1,20 @@
 .navbar{
     background-color: #0A6847;
 }
-body{
-    height: auto;
+
+.container{
+    height: 100%;
 }
+
+ul{
+    list-style: none;
+}
+
 nav a, nav p{
     color: #fff !important;
 }
 .footer{
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     padding: 15px 0;

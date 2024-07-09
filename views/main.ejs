@@ -8,7 +8,9 @@
        <ul>
            <li> <h1> <%= item.title %> </h1> </li>
            <li> <span>Authur :  <%= item.authur %> </span></li>
-           <li> <p> <%= item.composed.substring(0, 400) %>....<a href="/post/<%= item.title %>">Read more</a> </p> </li>
+           <li> <p class="time">Date : <%= new Date().toLocaleString() %> </p> </li>
+           <li> <img src=<%= item.image.toString() %> alt="image"> </li>
+           <li> <p> <%= item.composed.substring(0, 700) %>....<a href="/post/<%= item.Id %>">Read more</a> </p> </li>
        </ul>
        
  <% }) %>

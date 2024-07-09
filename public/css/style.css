@@ -34,9 +34,18 @@ nav a, nav p{
     align-items: center;
     background-color: #0A6847;
 }
+p{
+    font-size: 16.5px;
+    line-height: 1.5;
+}
 span{
     font-size: 1.7rem;
     padding: 0 0 10px;
     font-weight: 600;
     margin: 2px 0 15px;
+}
+.time{
+    padding: 5px 0 2px;
+    font-size: 1.2rem;
+    font-weight: 570;
 }

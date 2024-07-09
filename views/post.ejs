@@ -1,9 +1,10 @@
 <%- include("partials/header") -%>
     
-    <h1> <%= post.title %> </h1>
-    <span> <%= post.authur %> </span>
-    <p class="time"> <%= new Date().toLocaleString() %> </p>
-    <img class="image-display" src="../image/<%= post.image.originalname %>" alt="">
-    <p> <%= post.composed %> </p>
+    <ul>
+        <li>  <h1> <%= post.title %> </h1> </li>
+        <li> <span> <%= post.authur %> </span> </li>
+        <li> <p class="time"> <%= new Date().toLocaleString() %> </p> </li>
+        <li class="image-display"> <img src="../image/<%= post.image.originalname %>" alt=""> </li>
+        <li> <p> <%= post.composed %> </p> </li>
 
 <%- include("partials/footer") -%>

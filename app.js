@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 const posts = [];
 const multer  = require('multer');
 const path = require("path");
+let lastId = 1;
 
 const storage = multer.diskStorage({
     destination : (req, file, cb)=>{
@@ -69,7 +70,7 @@ app.get("/post/:Id", (req, res)=>{
 
 app.post("/compose",upload.single('input3'), (req,res)=>{
     
-    let lastId = 0;
+    
     const title = req.body.input1;
     const authur = req.body.input2;
     const image = req.file;

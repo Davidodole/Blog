@@ -55,14 +55,12 @@ app.get("/compose",(req, res)=>{
     res.render("compose");
 });
 
-app.get("/post/:Id", (req, res)=>{
-    const Id = req.params.Id;
+app.get("/post/:Links", (req, res)=>{
+    const Links = req.params.Links;
     
-    let postId = posts.find(post => post.Id == Id);
+    let postId = posts.find(postId => postId.title == title);
     
-    res.render("post",{
-        post : postId
-    });
+    res.render("post",{post : postId});
    
 });
 

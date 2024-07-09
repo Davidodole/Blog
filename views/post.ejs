@@ -3,7 +3,7 @@
     <h1> <%= post.title %> </h1>
     <span> <%= post.authur %> </span>
     <p class="time"> <%= new Date().toLocaleString() %> </p>
-    <img src="../image/<%= post.image.originalname %>" alt="">
+    <img class="image-display" src="../image/<%= post.image.originalname %>" alt="">
     <p> <%= post.composed %> </p>
 
 <%- include("partials/footer") -%>

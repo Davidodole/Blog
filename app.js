@@ -10,7 +10,7 @@ const message = "It is a long established fact that a reader will be distracted 
 
 //middle ware    
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use((req,res, next)=>{
     setTimeout(next, 3000);
@@ -37,8 +37,12 @@ app.get("/compose",(req, res)=>{
 });
 
 app.get("/post/:Links", (req, res)=>{
-    console.log(posts)
-    res.render("post")
+    const Links = req.params.Links;
+    const link = _.lowerCase(Links)
+    
+    if(req.params.Links == link) {
+        res.render("post")
+    }
 })
 
 
@@ -48,8 +52,10 @@ app.post("/compose", (req,res)=>{
     const title = req.body.input1;
     const authur = req.body.input2;
     const compose = req.body.input3;
+    let id = Math.floor(Math.random() * 100) * Math.floor(Math.random() * 50);
     
     const message = {
+        id : id,
         authur : authur,
         title : title,
         composed : compose,

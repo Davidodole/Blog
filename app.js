@@ -69,20 +69,15 @@ app.get("/post/:Id", (req, res)=>{
 // POST Router
 
 app.post("/compose",upload.single('input3'), (req,res)=>{
-    
-    
-    const title = req.body.input1;
-    const authur = req.body.input2;
-    const image = req.file;
-    const composed = req.body.input4;
-    
+       
 // creating object for user form  
     const message = {
         Id : lastId += 1,
-        title : title,
-        authur : authur,
-        image : image,
-        composed : composed
+        title : req.body.input1,
+        authur : req.body.input2,
+        image : req.file,
+        composed : req.body.input4,
+        composed2 : req.body.input5
     };
     
     posts.push(message);
